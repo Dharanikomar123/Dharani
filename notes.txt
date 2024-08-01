@@ -1,0 +1,124 @@
+It is a collection of Object.
+It provides architecture to store, manipulate group of Objects.
+We can do all operations such as searching, sorting, inserting, delete, manipulating .
+1)Set 2)List 3)Map 4)queue
+Set is a Interface . It does not allow duplicate data.
+It has classes :-
+1)TreeSet :- It will display the data in the shorted order.
+2)HashSet :-It will display the data in random order.
+3)LinkedHashSet :- It will display the data in same order.
+Autoboxing and Unboxing
+------------------------------------------
+The autoboxing convert the primitive data types into it equivalent Wrapper type.
+The unboxing convert the wrapper type to primitive datatype.
+
+Iterator :- it is used to iterate the data .It is an Interface.
+It has 3 methods 
+1)hasNext();
+2)next();
+3)remove();
+
+List :-It is an Interface.
+It allows duplicate records.
+We have classes 1)Stack 2)ArrayList 3)Linkedlist 4)Vector
+stack :FILO .The last element will be index 0.
+List display in the same order.
+
+Iterator:-hasNext(),next();remove();//In this we can move in one direction.
+ListIterator:- In this we can move in both direction.
+forward :- In this we have hasNext(),next().First the pointer with move in forward direction then it will move in backward direction.
+backward:- In this we have hasPrevious(),previous();
+java.util.Collections
+---------------------------------------
+It has lot of static methods which can be implemented  set,list,map,queue
+It this we have sort() which can sort a list,map,queue.
+Collections.sort()
+
+java.lang.Comparable :-
+public abstract int compareTo(T);
+it is used to sort our own object data.It checks the String ascii code.
+in this if the current object is greater than the specified object it return (+) value.
+in this if the current object is lesser than the specified object it return (-) value.
+in this if the current object is equal than the specified object it return zero value.
+java.lang.Comparable :-
+public abstract int compareTo(T);
+it is used to sort our own object data.It checks the String ascii code.
+in this if the current object is greater than the specified object it return (+) value.
+in this if the current object is lesser than the specified object it return (-) value.
+in this if the current object is equal than the specified object it return zero value.
+HashSet is converted to set because we don't have the Interface Iterator in the HashMap. We have it in Set.
+entrySet() is used to convert the Map into set.
+Map.Entry is a class contain getKey(),getValue()
+
+HashMap :- It gives high performance in the total data-structure of java collection framework.
+There are 2 factors which effect the performance of hashmap.
+1)Initial Capacity.
+2)Load Factor.
+------------------------------------------
+1)Initial Capacity is 16 bytes.
+2)It increases automatically when it reaches to the threshold.
+ 3)Initially it is 2 pow 4=16,Then it will 2 pow 5=32,then it will be 2 pow 6=64
+--------------------------------------------------------------------------------------------------------------------------
+Load Factor :- is measured that decides when to increase the HashMap capacity to maintain the get() and put() request.
+
+Queue Interface
+------------------------------
+It maintains the first-in-first-out order.
+It can be defined as an ordered list that is used to hold elements in the same order.
+The classes are PriorityQueue, Deque and ArrayDeque .
+
+ArrayDeque :- It is a class. We can remove and add the elements from both sides.
+It is also called double-ended queue.
+EnumSet :- it sort the data according to the enum list provided.
+EnumMap :- in this we will enter key and value pair.
+
+ArrayList :-
+1)It internally use dynamic array to store the elements.
+2)Manipulation of arraylist is slow.
+3)We can add the element at the rear end.
+
+LinkedList:-
+1)It internally use double link list to store the elements.
+2)Manipulation of Linkedlist is faster.
+3)LinkedList class acts like a list and queue.
+4)We can add the element at both the ends.
+
+HashMap
+1)It is not-synchronized .(not Thread safe we can use this with threads)
+2)It allows one null key and multiple null values.
+3)This faster than hashTable
+4)It is traversed by Iterator.
+5)It inherits AbstractMap class.
+------------------------------------
+
+
+HashTable
+1)It is synchronized .(Thread safe.we can use with threads)
+2)It doesn't allow any null key or value.
+3)It is slower than HashMap.
+4)It is traversed by Iterator and Enumerator.
+5)It inherits Dictionary class.
+1)AbstractMap it is the super class of HashMap .we cann't intanceate the AbstractMap so we have to create object of the HashMap.
+-------------------------------------------
+1)Dictionary it is the super class of HashTable .we cann't intanceate the Dictionary so we have to create object of the HashTable.
+
+Thread:-It is a sort of execution of instruction.
+
+single Thread Program:- Till now we were doing single threaded programing the program start execution from the main() till the end.
+------------------------------------------------------------------------------------------------
+Multi Thread Program:-
+Each thread will do some task.
+We can create object of Thread and assign the task.
+In this we will have run() and we will have start() .the start() will call the run().
+For this we can either extends 
+ class or implement runnable interface.
+There will be Thread switching .So we will see all the start() exceute at the same time and the output will be a mixture of all the task.
+------------------------------------------------------------------------------------------------------
+Thread lifecycle
+--------------------------
+new born thread
+start
+runnable(choose the thread)
+running
+block/wait/sleep
+dead(excution is completed)a
